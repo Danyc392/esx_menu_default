@@ -1,0 +1,147 @@
+@font-face{
+    font-family:'Bartolone';
+    src: url(../fuentes/Bartone.otf);
+}
+
+.menu {
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: bolder;
+	padding: 12px;
+	min-width: 320px;
+	color: #fff;
+	text-align: left;
+	position: absolute;
+}
+
+.menu.align-left {
+	left: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-top-left {
+	left: 40;
+	top: 40;
+}
+
+.menu.align-top {
+	left: 50%;
+	top: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-top-right {
+	right: 10;
+	top: 40;
+}
+
+.menu.align-right {
+	right: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-bottom-right {
+	right: 40;
+	bottom: 40;
+}
+
+.menu.align-bottom {
+	left: 50%;
+	bottom: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-bottom-left {
+	left: 40;
+	bottom: 40;
+}
+
+.menu.align-center {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px rgb(255, 255, 255);
+	border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: rgb(255, 255, 255);
+	border-radius: 5px;
+  }
+
+.menu .head {
+    position: absolute;
+    top: -5px;
+	padding: 0.20vw;
+    right: 30;
+    font-family: 'Bartolone';
+    font-size: .85vw;
+	font-weight: bolder;
+    color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 1px purple;
+    background-color: black;
+    box-shadow: 0 0 6px 1px #FF1493;
+	text-align: center;
+	border-radius: 7px;
+
+}
+
+.menu .menu-items {
+	background: rgba(0, 0, 0, 0.795);
+	box-shadow: 0 0 20px rgb(0, 0, 0);
+	padding: 11px;
+	border-radius: 5px;
+	max-height: 450px;
+	overflow-y: auto;
+}
+
+.menu .menu-items .menu-item {
+	background-color: rgba(70, 70, 70, 0.422);
+    text-shadow: 1px 1px black;
+	display: block;
+	padding: 6px;
+	font-size: 13px;
+	text-align: left;
+	text-indent: 5px;
+	margin-top: 5px;
+	color: #ffffff;
+	border-radius: 3px;
+}
+
+.menu .menu-items .menu-item.selected {
+	background-color: none;
+	border-right: .3vw solid white;
+	box-shadow: 0 0 6px 1px #FF1493;
+	font-weight: 600;
+	color: #ffffffe3;
+	animation: glitchy 0.3s ease 1 forwards;
+    transform: scale(1.02);
+    transition: ease-in-out 0.3s;
+}
+
+@keyframes glitchy {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        transform: translate(-2px, 2px);
+    }
+    25% {
+        transform: translate(-2px, -2px);
+    }
+    50% {
+        transform: translate(2px, 2px);
+    }
+    99% {
+        transform: translate(-2px, 2px);
+        background-color: rgba(70, 70, 70, 0.422);
+        box-shadow: 0 0 5px white !important;
+    }
+}
